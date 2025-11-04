@@ -6,16 +6,9 @@
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/03 18:10:19 by stmaire          ###   ########lyon.fr   */
+/*   Updated: 2025/11/04 08:40:06 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_alphabet(void)
 {
@@ -29,7 +22,14 @@ void	ft_print_alphabet(void)
 	}
 }
 
-/*int	main(void)
+/*#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	main(void)
 {
 	ft_print_alphabet();
 }*/

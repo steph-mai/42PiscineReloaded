@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 18:13:40 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/04 08:43:43 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 08:45:31 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 08:57:21 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_is_negative(int n)
+void	ft_ft(int *nbr)
 {
-	char	a;
-	char	b;
-
-	a = 'N';
-	b = 'P';
-	if (n < 0)
-		ft_putchar(a);
-	else
-		ft_putchar(b);
+	*nbr = 42;
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
+/*#include <stdio.h>
 
 int	main(void)
 {
-	int	i;
+	int nbr;
 
-	i = 0;
-	ft_is_negative(i);
+	ft_ft(&nbr);
+	printf("%d", nb);
 	return (0);
 }*/
