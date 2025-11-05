@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 17:28:42 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 17:33:40 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	i;
 
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/*#include <stdio.h>
 
 int	main(void)
 {
-	ft_print_alphabet();
+	char	str[] = "hello";
+	printf("%d", ft_strlen(str));
+	return (0);
 }*/

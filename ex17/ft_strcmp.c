@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 17:38:12 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/05 11:01:14 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	c;
+	int	i;
 
-	c = 'a';
-	while (c <= 'z')
+	i = 0;
+	while (s1[i])
 	{
-		ft_putchar(c);
-		c++;
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
 	}
+	return (s1[i] - s2[i]);
 }
 
-/*#include <unistd.h>
+/*#include <string.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_print_alphabet();
+	if (argc != 3)
+		return (-1);
+	printf("%d\n", ft_strcmp(argv[1], argv[2]));
+	printf("%d\n", strcmp(argv[1], argv[2]));
+	return (0);
 }*/

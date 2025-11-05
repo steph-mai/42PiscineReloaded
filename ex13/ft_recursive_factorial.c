@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 12:37:15 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 13:52:43 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
-{
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+int	ft_recursive_factorial(int nb)
+{	int	temp;
+	
+	temp = nb;
+	if (nb < 0 || nb >= 13)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	return(nb * ft_recursive_factorial(nb - 1));
 }
 
-/*#include <unistd.h>
+/*#include<stdio.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+int     main(void)
+{       
+        int     nb;
 
-int	main(void)
-{
-	ft_print_alphabet();
+        nb = 9;
+        printf("nb = %d\n", nb);
+        printf("%d\n", ft_recursive_factorial(nb));
+        return (0);
 }*/

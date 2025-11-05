@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 16:10:51 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 16:45:39 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+int	ft_sqrt(int nb)
 {
-	char	c;
+	int	i;
 
-	c = 'a';
-	while (c <= 'z')
+	i = 0;
+	if (nb <= 0)
+		return (0);
+	if (nb == 1)
+		return (1);
+	while (i <= nb / 2)
 	{
-		ft_putchar(c);
-		c++;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
+	return (0);
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/*#include <stdio.h>
 
 int	main(void)
 {
-	ft_print_alphabet();
+	int	i;
+
+	 
+	printf("%d", ft_sqrt(i));
+	return (0);
 }*/

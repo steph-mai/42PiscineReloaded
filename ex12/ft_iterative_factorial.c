@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 12:09:10 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 13:45:46 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+int	ft_iterative_factorial(int nb)
 {
-	char	c;
+	int	temp;
 
-	c = 'a';
-	while (c <= 'z')
+	temp = nb;
+	if (nb < 0 || nb >= 13)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	while (nb > 1)
 	{
-		ft_putchar(c);
-		c++;
+		temp = temp * (nb - 1);
+		nb--;
 	}
+	return (temp);
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/*#include<stdio.h>
 
 int	main(void)
 {
-	ft_print_alphabet();
+	int	nb;
+
+	nb = 12;
+	printf("nb = %d\n", nb);
+	printf("%d\n", ft_iterative_factorial(nb));
+	return (0);
 }*/

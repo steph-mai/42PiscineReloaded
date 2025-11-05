@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/05 11:55:34 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/05 12:14:43 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+#include <stdlib.h>
+
+int	*ft_range(int min, int max)
 {
-	char	c;
+	int	*tab;
+	int	i;
 
-	c = 'a';
-	while (c <= 'z')
+	if (min >= max)
+		return (NULL);
+	i = 0;
+	tab = malloc(sizeof(int) * (max - min));
+	while (i < max - min)
 	{
-		ft_putchar(c);
-		c++;
+		tab[i] = min + i;
+		i++;
 	}
+	return (tab);
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/*#include <stdio.h>
 
 int	main(void)
 {
-	ft_print_alphabet();
+	int		min = 4;
+	int		max = 7;
+	int		i = 0;
+	int	*tab;
+
+	tab = ft_range(min, max);
+	while (i < max - min)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
+	return (0);
 }*/

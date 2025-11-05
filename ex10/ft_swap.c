@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:51:19 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/05 08:35:33 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/04 09:10:03 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/04 09:19:01 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int	temp;
 
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-/*#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/*#include <stdio.h>
 
 int	main(void)
 {
-	ft_print_alphabet();
+	int	a;
+	int	b;
+
+	a = 21;
+	b = 42;
+	printf("a = %d, b = %d\n", a, b);
+	ft_swap(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
+	return (0);
 }*/

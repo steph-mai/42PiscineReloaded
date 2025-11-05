@@ -6,9 +6,11 @@
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:40 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/04 08:43:43 by stmaire          ###   ########lyon.fr   */
+/*   Updated: 2025/11/05 08:38:01 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {

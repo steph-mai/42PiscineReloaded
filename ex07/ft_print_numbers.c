@@ -6,9 +6,11 @@
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:03:36 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/04 08:41:39 by stmaire          ###   ########lyon.fr   */
+/*   Updated: 2025/11/05 08:36:47 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
