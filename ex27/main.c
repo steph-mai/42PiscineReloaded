@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmaire <stmaire@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 19:12:48 by stmaire           #+#    #+#             */
-/*   Updated: 2025/11/06 09:51:21 by stmaire          ###   ########lyon.fr   */
+/*   Created: 2025/11/06 12:34:10 by stmaire           #+#    #+#             */
+/*   Updated: 2025/11/06 12:43:52 by stmaire          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef FT_ABS_H
-# define FT_ABS_H
 
-# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
+int	main(int argc, char **argv)
+{
+	if (argc > 2)
+	{
+		write(2, "Too many arguments.\n", 20); 
+	}
+	int	i;
+	i = 0;
 
-#endif
+}
